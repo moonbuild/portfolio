@@ -1,0 +1,30 @@
+name: Frontend Base Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+  style-check:
+    name: Checking Lint & Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Clean Install
+        run: npm ci
+
+      - name: Run Lint & Prettier checks
+        run: npm run lint:ci
+
+      - name: Run Build
+        run: npm run build

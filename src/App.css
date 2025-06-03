@@ -1,9 +1,9 @@
-.app{
+.app {
   width: 100vw;
   height: 100vh;
   overflow: auto;
 }
-.app-content{
+.app-content {
   display: flex;
   align-items: center;
   justify-content: center;
