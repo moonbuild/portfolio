@@ -5,7 +5,7 @@ function App() {
     <div className="app">
       <div className="app-content">
         <span>App</span>
-      </div>{" "}
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "prepare": "husky init",
+    "prepare": "husky",
     "pre-commit":"lint-staged",
     "lint:ci": "eslint --max-warnings 0 --ext .ts,.tsx src && prettier --check src"
   },
