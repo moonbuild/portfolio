@@ -4,8 +4,8 @@ function App() {
   return (
     <div className="app">
       <div className="app-content">
-        <span>Portfolio</span>
-      </div>
+        <span>App</span>
+      </div>{" "}
     </div>
   );
 }
