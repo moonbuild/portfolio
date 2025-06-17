@@ -13,6 +13,7 @@
     "lint:ci": "eslint --max-warnings 0 --ext .ts,.tsx src && prettier --check src"
   },
   "dependencies": {
+    "lucide-react": "^0.516.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

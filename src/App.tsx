@@ -1,10 +1,11 @@
 import "./App.css";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <div className="app">
       <div className="app-content">
-        <span>App</span>
+        <Portfolio />
       </div>
     </div>
   );
