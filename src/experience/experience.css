@@ -1,9 +1,9 @@
-.experience{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 40px;
+.experience {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
 }
 
 .exp-date {
@@ -17,5 +17,4 @@
 .exp-role {
   color: var(--lightest-slate);
   font-weight: 300;
-
 }

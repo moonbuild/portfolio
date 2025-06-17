@@ -1,4 +1,4 @@
-.education{
+.education {
   min-height: 100vh;
 }
 .edu-date {
@@ -12,5 +12,4 @@
 .edu-institution {
   color: var(--lightest-slate);
   font-weight: 300;
-
 }

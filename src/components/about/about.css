@@ -18,7 +18,7 @@
   gap: 10px;
   border-bottom: 1px solid var(--green);
 }
-.about-title__text{
+.about-title__text {
   color: var(--white);
   font-weight: 600;
   font-size: 30px;

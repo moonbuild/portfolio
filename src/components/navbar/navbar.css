@@ -1,40 +1,39 @@
+.navbar {
+  position: sticky;
+  top: 0;
 
-    .navbar {
-      position: sticky;
-      top: 0;
+  background-color: rgba(10, 25, 47, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 1px 10px var(--dark-navy);
 
-      background-color: rgba(10, 25, 47, 0.6);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 2px 1px 10px var(--dark-navy);
+  z-index: 1000;
+  transition: transform 0.3s ease;
 
-      z-index: 1000;
-      transition: transform 0.3s ease;
+  padding: 2px 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      padding: 2px 6px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
+.navbar.hidden {
+  transform: translateY(-100%);
+}
 
-    .navbar.hidden {
-      transform: translateY(-100%);
-    }
+.navbar-title {
+  color: var(--light-slate);
+  font-size: 16px;
+}
 
-    .navbar-title {
-      color: var(--light-slate);
-      font-size: 16px;
-    }
+.navbar-items {
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
 
-    .navbar-items {
-      padding: 4px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .navbar-item {
-      padding: 4px;
-    }
+.navbar-item {
+  padding: 4px;
+}

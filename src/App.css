@@ -14,20 +14,20 @@
   gap: 4px;
   justify-content: center;
 }
-.heading{
+.heading {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-.heading-text{
+.heading-text {
   border-bottom: 1px solid var(--green);
 }
-.heading-number{
+.heading-number {
   color: var(--green);
   font-weight: 500;
   font-size: 30px;
 }
-.heading-title{
+.heading-title {
   color: var(--white);
   font-weight: 600;
   font-size: 30px;
