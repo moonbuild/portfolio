@@ -1,0 +1,17 @@
+:root {
+  --dark-navy: #0a192f; /* 10, 25, 47 */
+  --navy: #112240; /* 17, 34, 64 */
+  --light-navy: #233554;
+  --lightest-navy: #303c55;
+  --slate: #8892b0;
+  --light-slate: #a8b2d1;
+  --lightest-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #64ffda;
+  --font-main: "Inter", sans-serif;
+  --font-base: "Fira Code", monospace;
+  --accent-blue: #57cbff;
+  --accent-purple: #c792ea;
+  --shadow-green: rgba(100,255,218, 0.1);
+  --shadow-blue: rgba(87,203,255, 0.1);
+}

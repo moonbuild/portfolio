@@ -1,0 +1,16 @@
+.education{
+  min-height: 100vh;
+}
+.edu-date {
+  color: var(--green);
+}
+.edu-title {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 800;
+}
+.edu-institution {
+  color: var(--lightest-slate);
+  font-weight: 300;
+
+}

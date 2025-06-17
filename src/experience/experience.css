@@ -1,0 +1,21 @@
+.experience{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.exp-date {
+  color: var(--green);
+}
+.exp-company {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 800;
+}
+.exp-role {
+  color: var(--lightest-slate);
+  font-weight: 300;
+
+}
