@@ -82,10 +82,10 @@ Designed for scalibility as application is expected to have 1000 operations ever
   return (
     <section className="projects">
       <div className="heading">
-        <span className="heading-text">
+        <div className="heading-text">
           <span className="heading-number">III.</span>
           <span className="heading-title">Projects</span>
-        </span>
+        </div>
       </div>
       <div className="projects-grid">
         {projectDetails.map(
@@ -136,7 +136,7 @@ Designed for scalibility as application is expected to have 1000 operations ever
                 <p className="project-description">{description}</p>
                 <div className="tech-stack">
                   {techStack.map((tag) => (
-                    <div key={tag} className="tech-tag">
+                    <div key={tag} className="tag">
                       {tag}
                     </div>
                   ))}

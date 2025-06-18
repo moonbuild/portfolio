@@ -1,5 +1,10 @@
 .projects {
   min-height: 100vh;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
 }
 .projects-grid {
   display: flex;
@@ -156,21 +161,7 @@
   flex-wrap: wrap;
   gap: 4px;
 }
-.tech-tag {
-  padding: 6px 8px;
-  background-color: var(--lightest-navy);
-  border: 1px solid var(--light-navy);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: var(--green);
-  transition: all 0.3s ease;
-}
-.tech-tag:hover {
-  background: var(--green);
-  color: var(--dark-navy);
-  font-weight: 600;
-  transform: translateY(-2px);
-}
+
 .project-code-btn {
   flex: 1;
   padding: 12px 20px;

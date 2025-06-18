@@ -4,20 +4,19 @@
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  max-width: 80vw;
 }
 
 .hero-title {
   color: var(--white);
   font-family: var(--font-main);
-  font-size: 80px;
+  font-size: 2.25rem;
   font-weight: 700;
 }
 
 .hero-title__sub {
   color: var(--light-slate);
   font-family: var(--font-main);
-  font-size: 70px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -86,5 +85,15 @@
   100% {
     transform: translateY(-100%);
     opacity: 0;
+  }
+}
+
+/* medium screen size */
+@media (min-width: 768px){
+  .hero-title{
+    font-size: 4.8rem;
+  }
+  .hero-title__sub{
+    font-size: 4.1rem;
   }
 }

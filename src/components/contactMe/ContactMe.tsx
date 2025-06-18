@@ -1,0 +1,132 @@
+import { useCallback, useState } from "react";
+import { Send } from "lucide-react";
+import toast, { Toaster } from "react-hot-toast";
+
+import "./contactMe.css";
+
+const ContactMe = () => {
+  const [hasInteracted, setHasInteracted] = useState<boolean>(false);
+
+  const [email, setEmail] = useState<string>("");
+  const [emailErrorMessage, setEmailErrorMessage] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [nameErrorMessage, setNameErrorMessage] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const sendToWebhook = async (data: {
+    email: string;
+    name: string;
+    message: string;
+  }) => {
+    await toast.promise(
+      fetch(import.meta.env.VITE_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      }).then((res) => {
+        if (!res.ok && res.status !== 200) {
+          throw new Error(`Failed to send message :( \n Status: ${res.status}`);
+        }
+      }),
+      {
+        loading: "Sending your message...",
+        success: "Message sent successfully!",
+        error: "Failed to send message :(",
+      },
+    );
+  };
+  const formSubmit = useCallback(() => {
+    if (
+      emailErrorMessage.trim().length > 0 ||
+      nameErrorMessage.trim().length > 0
+    ) {
+      setHasInteracted(true);
+      return;
+    }
+    const data = {
+      email: email,
+      name: name,
+      message: message,
+    };
+    sendToWebhook(data);
+  }, [email, name, message]);
+
+  return (
+    <section className="contact">
+      <div className="heading">
+        <div className="heading-text">
+          <div className="heading-number">VI.</div>
+          <div className="heading-title">Contact Me</div>
+        </div>
+      </div>
+
+      <div className="contact-body">
+        <div className="contact-form">
+          <div className="label-input-container">
+            <div className="label">
+              Email<span className="required">*</span>
+            </div>
+            <div className="input-error-wrapper">
+              <input
+                className={`input ${hasInteracted && emailErrorMessage.trim().length > 0 ? "input-err" : ""}`}
+                type="text"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setEmailErrorMessage(
+                    e.target.value.trim().length === 0 && hasInteracted
+                      ? "Please enter your email so I can contact you."
+                      : "",
+                  );
+                  setHasInteracted(true);
+                }}
+              />
+              <span className="error-message">{emailErrorMessage}</span>
+            </div>
+          </div>
+          <div className="label-input-container">
+            <div className="label">
+              Name<span className="required">*</span>
+            </div>
+            <div className="input-error-wrapper">
+              <input
+                className={`input ${hasInteracted && nameErrorMessage.trim().length > 0 ? "input-err" : ""}`}
+                type="text"
+                placeholder="Enter your name"
+                onChange={(e) => {
+                  setName(e.target.value);
+                  setNameErrorMessage(
+                    e.target.value.trim().length === 0 && hasInteracted
+                      ? "Please enter your name so I can properly address you."
+                      : "",
+                  );
+                  setHasInteracted(true);
+                }}
+              />
+              <span className="error-message">{nameErrorMessage}</span>
+            </div>
+          </div>
+          <div className="label-input-container">
+            <div className="label">Message</div>
+            <div className="input-error-wrapper">
+              <textarea
+                className="textarea"
+                placeholder="Hi, feel free to reach out"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+          </div>
+        </div>
+        <button className="submit-btn" onClick={formSubmit}>
+          <Send size={18} />
+          Submit
+        </button>
+      </div>
+      <Toaster />
+    </section>
+  );
+};
+export default ContactMe;

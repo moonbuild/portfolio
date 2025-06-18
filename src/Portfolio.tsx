@@ -1,9 +1,11 @@
 import About from "./components/about/About";
+import ContactMe from "./components/contactMe/ContactMe";
+import Education from "./components/education/Education";
+import Experience from "./components/experience/Experience";
 import Hero from "./components/hero/Hero";
 import Navbar from "./components/navbar/Navbar";
-import Education from "./education/Education";
-import Experience from "./experience/Experience";
-import Projects from "./projects/Projects";
+import Projects from "./components/projects/Projects";
+import Skills from "./components/skills/Skills";
 
 const Portfolio = () => {
   return (
@@ -21,6 +23,10 @@ const Portfolio = () => {
         <Projects />
         {/* experience */}
         <Experience />
+        {/* Skills */}
+        <Skills />
+        {/* Contact Me */}
+        <ContactMe />
       </div>
     </div>
   );

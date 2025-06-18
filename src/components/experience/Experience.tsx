@@ -45,10 +45,10 @@ const Experience = () => {
   return (
     <section className="experience">
       <div className="heading">
-        <span className="heading-text">
+        <div className="heading-text">
           <span className="heading-number">IV.</span>
           <span className="heading-title">Experience</span>
-        </span>
+        </div>
       </div>
       <div className="heading-container">
         <div className="timeline">
