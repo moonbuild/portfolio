@@ -50,7 +50,7 @@ const ContactMe = () => {
       message: message,
     };
     sendToWebhook(data);
-  }, [email, name, message]);
+  }, [emailErrorMessage, nameErrorMessage, email, name, message]);
 
   return (
     <section className="contact">
