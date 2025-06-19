@@ -1,20 +1,23 @@
-.experience {
+.education {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-
-.exp-date {
+.edu-date {
   color: var(--green);
 }
-.exp-company {
+.edu-title {
   color: var(--white);
   font-size: 20px;
   font-weight: 800;
 }
-.exp-role {
+.edu-institution {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--lightest-slate);
   font-weight: 300;
 }

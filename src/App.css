@@ -1,10 +1,13 @@
 .portfolio-content {
-  padding: 0px 80px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .base-green-text {
   color: var(--green);
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 .section-heading__container {
@@ -17,10 +20,13 @@
 .heading {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
 }
 .heading-text {
   border-bottom: 1px solid var(--green);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .heading-number {
   color: var(--green);
@@ -30,7 +36,7 @@
 .heading-title {
   color: var(--white);
   font-weight: 600;
-  font-size: 30px;
+  font-size: 28px;
 }
 .timeline {
   margin: 0 auto;
@@ -73,4 +79,26 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.tag {
+  padding: 6px 10px;
+  background-color: var(--lightest-navy);
+  border: 1px solid var(--light-navy);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--green);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.tag:hover {
+  background: var(--green);
+  color: var(--dark-navy);
+  font-weight: 600;
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .portfolio-content {
+    padding: 0px 80px;
+  }
 }
