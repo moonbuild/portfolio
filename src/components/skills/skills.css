@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 
 .skills-container {
@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  
+
   transition: all 0.3s ease;
 }
 .skill-card:hover {

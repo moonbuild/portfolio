@@ -89,11 +89,11 @@
 }
 
 /* medium screen size */
-@media (min-width: 768px){
-  .hero-title{
+@media (min-width: 768px) {
+  .hero-title {
     font-size: 4.8rem;
   }
-  .hero-title__sub{
+  .hero-title__sub {
     font-size: 4.1rem;
   }
 }

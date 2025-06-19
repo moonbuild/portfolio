@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 .edu-date {
   color: var(--green);
@@ -16,8 +16,8 @@
 }
 .edu-institution {
   display: flex;
-align-items: center;
-gap: 10px;
+  align-items: center;
+  gap: 10px;
   color: var(--lightest-slate);
   font-weight: 300;
 }

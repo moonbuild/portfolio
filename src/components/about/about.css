@@ -56,22 +56,21 @@
 }
 
 /* medium screen (Tabs, IPads)*/
-@media (min-width: 640px){
-  .about-bio{
+@media (min-width: 640px) {
+  .about-bio {
     max-width: 50ch;
   }
-  .about-img__container{
+  .about-img__container {
     max-width: 320px;
   }
 }
 
-
 /* large screen  (Laptop, TV) */
-@media (min-width: 768px){
-  .about-bio{
+@media (min-width: 768px) {
+  .about-bio {
     max-width: 80ch;
   }
-  .about-img__container{
+  .about-img__container {
     max-width: 320px;
   }
 }

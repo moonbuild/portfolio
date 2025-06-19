@@ -1,10 +1,10 @@
 .projects {
   min-height: 100vh;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:20px;
+  gap: 20px;
 }
 .projects-grid {
   display: flex;
