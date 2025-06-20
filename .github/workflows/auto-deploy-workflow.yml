@@ -36,6 +36,8 @@ jobs:
 
       - name: Build Project
         run: npm run build
+        env:
+          VITE_WEBHOOK_URL: ${{ secrets.VITE_WEBHOOK_URL }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
