@@ -1,4 +1,4 @@
-import "./hero.css";
+import './hero.css';
 
 const Hero = () => {
   return (
@@ -15,9 +15,7 @@ const Hero = () => {
             <span>backend developer</span>
           </div>
         </div>
-        <span>
-          specializing in building scalable, creative digital projects.
-        </span>
+        <span>specializing in building scalable, creative digital projects.</span>
       </div>
     </section>
   );

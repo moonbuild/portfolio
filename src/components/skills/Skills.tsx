@@ -1,5 +1,5 @@
-import { Bot, Hammer, SquareDashedMousePointer, Webhook } from "lucide-react";
-import "./skills.css";
+import { Bot, Hammer, SquareDashedMousePointer, Webhook } from 'lucide-react';
+import './skills.css';
 
 const Skills = () => {
   interface SkillDetails {
@@ -10,36 +10,36 @@ const Skills = () => {
   }
   const skillDetails: SkillDetails[] = [
     {
-      key: "frontend",
+      key: 'frontend',
       icon: <SquareDashedMousePointer size={18} />,
-      category: "Frontend Development",
+      category: 'Frontend Development',
       skillsList: [
-        "React",
-        "Vite",
-        "Typescript",
-        "CSS",
-        "TailwindCSS",
-        "Zustand",
-        "React Router Dom",
+        'React',
+        'Vite',
+        'Typescript',
+        'CSS',
+        'TailwindCSS',
+        'Zustand',
+        'React Router Dom',
       ],
     },
     {
-      key: "backend",
+      key: 'backend',
       icon: <Webhook size={18} />,
-      category: "Backend Development",
-      skillsList: ["Python", "FastAPI", "SQL", "PostgreSQL"],
+      category: 'Backend Development',
+      skillsList: ['Python', 'FastAPI', 'SQL', 'PostgreSQL'],
     },
     {
-      key: "dsai",
+      key: 'dsai',
       icon: <Bot size={18} />,
-      category: "Data Science and AI",
-      skillsList: ["TensorFlow", "NumPy", "Pandas", "Matplotlib", "openCV"],
+      category: 'Data Science and AI',
+      skillsList: ['TensorFlow', 'NumPy', 'Pandas', 'Matplotlib', 'openCV'],
     },
     {
-      key: "development",
+      key: 'development',
       icon: <Hammer size={18} />,
-      category: "Development & Deployment Tools",
-      skillsList: ["Git", "Git Hooks", "ESLint", "CI/CD"],
+      category: 'Development & Deployment Tools',
+      skillsList: ['Git', 'Git Hooks', 'ESLint', 'CI/CD'],
     },
   ];
   return (
