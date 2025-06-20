@@ -1,5 +1,5 @@
-import { MapPinIcon } from "lucide-react";
-import "./education.css";
+import { MapPinIcon } from 'lucide-react';
+import './education.css';
 const Education = () => {
   interface EducationDetails {
     key: string;
@@ -10,9 +10,9 @@ const Education = () => {
   }
   const educationDetails: EducationDetails[] = [
     {
-      key: "school",
-      duration: "2009 - 2019",
-      title: "1st- 10th Schooling",
+      key: 'school',
+      duration: '2009 - 2019',
+      title: '1st- 10th Schooling',
       institution: `St. Peter's Modal School, Nacharam, Hyderabad`,
       description: `
                   Completed my schooling with a strong base in academics and core
@@ -20,9 +20,9 @@ const Education = () => {
                   `,
     },
     {
-      key: "school",
-      duration: "2019 - 2021",
-      title: "11th - 12th MPC Intermediate",
+      key: 'school',
+      duration: '2019 - 2021',
+      title: '11th - 12th MPC Intermediate',
       institution: `Nano Junior College, Nallakunta, Hyderabad, India`,
       description: `
                   Studied core science subjects with a focus on problem solving and
@@ -30,9 +30,9 @@ const Education = () => {
                   `,
     },
     {
-      key: "school",
-      duration: "2021 - 2025",
-      title: "Bachelor of Technology, DSAI",
+      key: 'school',
+      duration: '2021 - 2025',
+      title: 'Bachelor of Technology, DSAI',
       institution: `ICFAI University`,
       description: `
                   Graduation in August 2025, I'm specializing in Data Science and
@@ -51,21 +51,19 @@ const Education = () => {
         </div>
       </div>
       <div className="timeline">
-        {educationDetails.map(
-          ({ key, duration, title, institution, description }) => (
-            <div key={key} className="timeline-item">
-              <div className="timeline-card">
-                <div className="edu-date">{duration}</div>
-                <div className="edu-title">{title}</div>
-                <div className="edu-institution">
-                  <MapPinIcon size={18} />
-                  {institution}
-                </div>
-                <div className="edu-description">{description}</div>
+        {educationDetails.map(({ key, duration, title, institution, description }) => (
+          <div key={key} className="timeline-item">
+            <div className="timeline-card">
+              <div className="edu-date">{duration}</div>
+              <div className="edu-title">{title}</div>
+              <div className="edu-institution">
+                <MapPinIcon size={18} />
+                {institution}
               </div>
+              <div className="edu-description">{description}</div>
             </div>
-          ),
-        )}
+          </div>
+        ))}
       </div>
     </section>
   );

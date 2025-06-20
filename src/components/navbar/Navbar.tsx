@@ -1,6 +1,6 @@
-import { MenuIcon } from "lucide-react";
-import "./navbar.css";
-import { useState } from "react";
+import { MenuIcon } from 'lucide-react';
+import './navbar.css';
+import { useState } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
       <button className="hamburger" onClick={toggleOpen}>
         <MenuIcon size={20} />
       </button>
-      <div className={`navbar-items ${isOpen ? "show" : ""}`}>
+      <div className={`navbar-items ${isOpen ? 'show' : ''}`}>
         <a href="about" className="navbar-item" onClick={handleClose}>
           About
         </a>

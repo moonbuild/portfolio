@@ -8,8 +8,8 @@
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --green: #64ffda;
-  --font-main: "Inter", sans-serif;
-  --font-base: "Fira Code", monospace;
+  --font-main: 'Inter', sans-serif;
+  --font-base: 'Fira Code', monospace;
   --accent-blue: #57cbff;
   --accent-purple: #c792ea;
   --shadow-green: rgba(100, 255, 218, 0.1);

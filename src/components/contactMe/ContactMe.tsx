@@ -1,27 +1,23 @@
-import { useCallback, useState } from "react";
-import { Send } from "lucide-react";
-import toast, { Toaster } from "react-hot-toast";
+import { useCallback, useState } from 'react';
+import { Send } from 'lucide-react';
+import toast, { Toaster } from 'react-hot-toast';
 
-import "./contactMe.css";
+import './contactMe.css';
 
 const ContactMe = () => {
   const [hasInteracted, setHasInteracted] = useState<boolean>(false);
 
-  const [email, setEmail] = useState<string>("");
-  const [emailErrorMessage, setEmailErrorMessage] = useState<string>("");
-  const [name, setName] = useState<string>("");
-  const [nameErrorMessage, setNameErrorMessage] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const sendToWebhook = async (data: {
-    email: string;
-    name: string;
-    message: string;
-  }) => {
+  const [email, setEmail] = useState<string>('');
+  const [emailErrorMessage, setEmailErrorMessage] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [nameErrorMessage, setNameErrorMessage] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const sendToWebhook = async (data: { email: string; name: string; message: string }) => {
     await toast.promise(
       fetch(import.meta.env.VITE_WEBHOOK_URL, {
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       }).then((res) => {
@@ -30,20 +26,24 @@ const ContactMe = () => {
         }
       }),
       {
-        loading: "Sending your message...",
-        success: "Message sent successfully!",
-        error: "Failed to send message :(",
+        loading: 'Sending your message...',
+        success: 'Message sent successfully!',
+        error: 'Failed to send message :(',
       },
     );
   };
   const formSubmit = useCallback(() => {
-    if (
-      emailErrorMessage.trim().length > 0 ||
-      nameErrorMessage.trim().length > 0
-    ) {
+    if (email.trim().length === 0 || name.trim().length === 0) {
+      toast.error('Please enter name and email so that I can properly contact you');
       setHasInteracted(true);
       return;
     }
+    if (emailErrorMessage.trim().length > 0 || nameErrorMessage.trim().length > 0) {
+      toast.error('Please fill all fields correctly before senidng the message');
+      setHasInteracted(true);
+      return;
+    }
+
     const data = {
       email: email,
       name: name,
@@ -69,7 +69,7 @@ const ContactMe = () => {
             </div>
             <div className="input-error-wrapper">
               <input
-                className={`input ${hasInteracted && emailErrorMessage.trim().length > 0 ? "input-err" : ""}`}
+                className={`input ${hasInteracted && emailErrorMessage.trim().length > 0 ? 'input-err' : ''}`}
                 type="text"
                 placeholder="Enter your email"
                 value={email}
@@ -77,8 +77,8 @@ const ContactMe = () => {
                   setEmail(e.target.value);
                   setEmailErrorMessage(
                     e.target.value.trim().length === 0 && hasInteracted
-                      ? "Please enter your email so I can contact you."
-                      : "",
+                      ? 'Please enter your email so I can contact you.'
+                      : '',
                   );
                   setHasInteracted(true);
                 }}
@@ -92,15 +92,15 @@ const ContactMe = () => {
             </div>
             <div className="input-error-wrapper">
               <input
-                className={`input ${hasInteracted && nameErrorMessage.trim().length > 0 ? "input-err" : ""}`}
+                className={`input ${hasInteracted && nameErrorMessage.trim().length > 0 ? 'input-err' : ''}`}
                 type="text"
                 placeholder="Enter your name"
                 onChange={(e) => {
                   setName(e.target.value);
                   setNameErrorMessage(
                     e.target.value.trim().length === 0 && hasInteracted
-                      ? "Please enter your name so I can properly address you."
-                      : "",
+                      ? 'Please enter your name so I can properly address you.'
+                      : '',
                   );
                   setHasInteracted(true);
                 }}

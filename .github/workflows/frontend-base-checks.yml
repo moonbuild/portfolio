@@ -5,19 +5,28 @@ on:
     types: [opened, synchronize, reopened]
     branches:
       - main
+  workflow_dispatch:
+
+concurrency:
+  group: 'base-check'
+  cancel-in-progress: true
 
 jobs:
-  style-check:
-    name: Checking Lint & Prettier
+  base-check:
+    name: Lint, Format & Build Checks
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: read
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install Node
+      - name: Install & Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 20
           cache: "npm"
 
       - name: Clean Install
@@ -28,3 +37,5 @@ jobs:
 
       - name: Run Build
         run: npm run build
+        env:
+          VITE_WEBHOOK_URL: ${{ secrets.VITE_WEBHOOK_URL }}
