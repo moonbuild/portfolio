@@ -9,7 +9,8 @@
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width:100%;
   gap: 12px;
 }
 .skill-card {
@@ -18,11 +19,9 @@
   border-radius: 16px;
   padding: 20px;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   gap: 16px;
-
   transition: all 0.3s ease;
 }
 .skill-card:hover {
@@ -46,17 +45,22 @@
   align-items: center;
 }
 .skills-category {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .skills-list {
   display: flex;
   flex-wrap: wrap;
+  padding:4px;
   gap: 8px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .skills-category {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .skills-container{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
   }
 }

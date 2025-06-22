@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { Send } from 'lucide-react';
+import { Mail, MessageSquare, Send, User } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 
 import './contactMe.css';
@@ -53,7 +53,7 @@ const ContactMe = () => {
   }, [emailErrorMessage, nameErrorMessage, email, name, message]);
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <div className="heading">
         <div className="heading-text">
           <div className="heading-number">VI.</div>
@@ -65,7 +65,11 @@ const ContactMe = () => {
         <div className="contact-form">
           <div className="label-input-container">
             <div className="label">
-              Email<span className="required">*</span>
+              <Mail color="var(--accent-blue)" size={18} />
+              <div>
+                {' '}
+                Email<span className="required">*</span>
+              </div>
             </div>
             <div className="input-error-wrapper">
               <input
@@ -88,7 +92,10 @@ const ContactMe = () => {
           </div>
           <div className="label-input-container">
             <div className="label">
-              Name<span className="required">*</span>
+              <User color="var(--accent-blue)" size={18} />{' '}
+              <div>
+                Name<span className="required">*</span>
+              </div>
             </div>
             <div className="input-error-wrapper">
               <input
@@ -109,7 +116,10 @@ const ContactMe = () => {
             </div>
           </div>
           <div className="label-input-container">
-            <div className="label">Message</div>
+            <div className="label">
+              <MessageSquare color="var(--accent-purple)" size={18} />
+              Message
+            </div>
             <div className="input-error-wrapper">
               <textarea
                 className="textarea"
@@ -120,10 +130,12 @@ const ContactMe = () => {
             </div>
           </div>
         </div>
-        <button className="submit-btn" onClick={formSubmit}>
-          <Send size={18} />
-          Submit
-        </button>
+        <div className="contact-footer">
+          <button className="submit-btn" onClick={formSubmit}>
+            <Send size={18} />
+            Submit
+          </button>
+        </div>
       </div>
       <Toaster />
     </section>

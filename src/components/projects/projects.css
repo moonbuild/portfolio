@@ -14,7 +14,7 @@
 }
 
 .project-card {
-  width: 400px;
+  width: 350px;
   background: var(--navy);
   border-radius: 20px;
   overflow: hidden;
@@ -131,11 +131,13 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 15px;
 }
 .project-header {
   display: flex;
   justify-content: space-between;
+  text-align: center;
   align-items: center;
 }
 .project-title {
@@ -144,6 +146,7 @@
   color: var(--white);
   transition: color 0.3s ease;
   flex: 1;
+  text-align: center;
 }
 .project-card:hover .project-title {
   color: var(--green);
@@ -151,27 +154,38 @@
 
 .project-description {
   color: var(--light-slate);
+  padding: 0px 8px;
   font-size: 0.95rem;
   line-height: 1.6;
-  text-align: justify;
+  text-align: center;
 }
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
+  justify-content: center;
 }
 
 .project-code-btn {
-  flex: 1;
   padding: 12px 20px;
   border: none;
   border-radius: 16px;
-  font-size: 0.9rem;
   cursor: pointer;
 
   background: var(--shadow-blue);
   backdrop-filter: blur(10px);
+
+  border: 1px solid var(--slate);
+
+  transition: all 0.3s ease;
+}
+.project-code-btn:hover {
+  transform: translateY(-2px);
+}
+
+.project-code-btn a{
+  font-size: 0.9rem;
 
   display: flex;
   align-items: center;
@@ -180,10 +194,4 @@
   color: var(--white);
   font-family: var(--font-main);
   text-decoration: none;
-  border: 1px solid var(--slate);
-
-  transition: all 0.3s ease;
-}
-.project-code-btn:hover {
-  transform: translateY(-2px);
 }

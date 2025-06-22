@@ -23,8 +23,9 @@ const Projects = () => {
       description: `
       Built a web application using React, Vite and Typescript for EEG data visualization in neuroscience research.
       Integrated FastAPI with MNE Python for signal filtering, artifact removal, event annotation and epoch analysis.
-       Added topomap and PSD visualisations to enhance interpretation of EEG signals.`,
+      `,
       techStack: ['React', 'Typescript', 'TailwindCSS', 'Python', 'FastAPI', 'Zustand'],
+      repoLink: 'https://github.com/moonbuild/BrainVis',
     },
     {
       key: 'face-landmark',
@@ -33,7 +34,7 @@ const Projects = () => {
       title: 'Face Landmark Detection',
       description: `Built a lightweight CNN model for fast real time detection of facial features like 
       eyes, nose and mouth. Employed advanced normalization and data augumentation techniques to enhance model robustness, achieving 90%+ accuracy and under 100ms inference.
-      Optimized architecture and applied pruning to reduce model size by 60% without losing performance.`,
+      `,
       techStack: ['Python', 'Tensorflow'],
     },
     {
@@ -43,8 +44,7 @@ const Projects = () => {
       title: 'E Commerce Website',
       description: `
                   Built a web application with backend and frontend from scratch during my internship at SCR. 
-                  Desinged a SQL database for 600+ products , integrated inventory and order tracking, and added role based-access for Sellers, Buyers, and Admins improving efficiency by 40%. 
-                  Designed for scalibility as application is expected to have 1000 operations every day
+                  Desinged a SQL database with 10,000 records , integrated inventory and order tracking, and added role based-access for Sellers, Buyers, and Admins improving efficiency by 40%. 
                 `,
       techStack: ['PHP', 'PostgreSQL', 'TailwindCSS'],
     },
@@ -73,7 +73,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="projects">
+    <section id="projects" className="projects">
       <div className="heading">
         <div className="heading-text">
           <span className="heading-number">III.</span>
@@ -81,7 +81,7 @@ const Projects = () => {
         </div>
       </div>
       <div className="projects-grid">
-        {projectDetails.map(({ key, video, path, title, description, techStack }) => (
+        {projectDetails.map(({ key, video, path, title, description, techStack, repoLink }) => (
           <div className={`project-card ${video ? 'video-card' : 'image-card'}`} key={key}>
             {video ? (
               <div className="media-container">
@@ -125,8 +125,10 @@ const Projects = () => {
               </div>
               <div className="project-actions">
                 <button className="project-code-btn">
-                  <Code size={18} />
-                  Code
+                  <a href={repoLink} target="_blank">
+                    <Code size={18} />
+                    Code
+                  </a>
                 </button>
               </div>
             </div>

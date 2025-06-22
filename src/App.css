@@ -31,7 +31,7 @@
 .heading-number {
   color: var(--green);
   font-weight: 500;
-  font-size: 30px;
+  font-size: 25px;
 }
 .heading-title {
   color: var(--white);
@@ -60,10 +60,10 @@
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 3px;
-  top: 25px;
-  width: 24px;
-  height: 24px;
+  left: 6px;
+  top: 18px;
+  width: 18px;
+  height: 18px;
   background-color: var(--green);
   border-radius: 50%;
   border: 2px solid var(--light-slate);
@@ -100,5 +100,11 @@
 @media (min-width: 768px) {
   .portfolio-content {
     padding: 0px 80px;
+  }
+  .timeline-item::before {
+    left: 3px;
+    top:25px;
+    width: 24px;
+    height: 24px;
   }
 }
