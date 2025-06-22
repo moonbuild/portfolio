@@ -56,9 +56,8 @@
 }
 
 @media (max-width: 940px) {
-  .about{
+  .about {
     justify-content: center;
     gap: 20px;
   }
-
 }

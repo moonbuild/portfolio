@@ -62,7 +62,7 @@
   .navbar-items {
     display: flex;
     flex-direction: row;
-    gap:12px;
+    gap: 12px;
     position: static;
     background: transparent;
     width: auto;
