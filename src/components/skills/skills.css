@@ -10,7 +10,7 @@
 .skills-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  width:100%;
+  width: 100%;
   gap: 12px;
 }
 .skill-card {
@@ -51,7 +51,7 @@
 .skills-list {
   display: flex;
   flex-wrap: wrap;
-  padding:4px;
+  padding: 4px;
   gap: 8px;
 }
 
@@ -59,8 +59,7 @@
   .skills-category {
     font-size: 1.25rem;
   }
-  .skills-container{
+  .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
   }
 }

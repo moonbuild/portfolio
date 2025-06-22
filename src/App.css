@@ -103,7 +103,7 @@
   }
   .timeline-item::before {
     left: 3px;
-    top:25px;
+    top: 25px;
     width: 24px;
     height: 24px;
   }

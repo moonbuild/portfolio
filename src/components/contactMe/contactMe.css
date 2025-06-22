@@ -31,7 +31,7 @@
   line-height: normal;
   display: flex;
   align-items: center;
-  gap:8px
+  gap: 8px;
 }
 .input-error-wrapper {
   display: flex;
@@ -75,7 +75,7 @@
   border: none;
   padding: 10px 16px;
 }
-.contact-footer{
+.contact-footer {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -97,13 +97,13 @@
   transform: scale(1.04);
 }
 
-@media (max-width: 768px){
-  .input{
+@media (max-width: 768px) {
+  .input {
     min-width: 300px;
     max-width: 300px;
   }
-  .textarea{
-        min-width: 300px;
+  .textarea {
+    min-width: 300px;
     max-width: 300px;
   }
 }
