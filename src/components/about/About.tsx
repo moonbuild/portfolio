@@ -25,7 +25,7 @@ const About = () => {
       </div>
       <div className="about-image-frame">
         <div className="about-img__glow" />
-        <img src="about/photo.jpg" className="about-img" alt="About Me" />
+        <img src="/about/photo.jpg" className="about-img" alt="About Me" />
       </div>
     </section>
   );

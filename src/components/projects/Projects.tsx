@@ -18,7 +18,7 @@ const Projects = () => {
     {
       key: 'brain-vis1',
       video: true,
-      path: '/portfolio/projects/brain-vis.mp4',
+      path: '/projects/brain-vis.mp4',
       title: 'Brain Visualisation',
       description: `
       Built a web application using React, Vite and Typescript for EEG data visualization in neuroscience research.
@@ -96,6 +96,7 @@ const Projects = () => {
                   <source src={path} type="video/mp4" />
                   Your browser does not support the video tag
                 </video>
+
                 <div className="video-controls">
                   <button className="play-pause-btn" onClick={() => toggleVideo(key)}>
                     {pausedVideos.has(key) ? <Play size={18} /> : <Pause size={18} />}

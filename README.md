@@ -1,3 +1,3 @@
 # portfolio
 
-Portfolio of Mourya Pranay 
+Portfolio of Mourya Pranay
