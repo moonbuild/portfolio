@@ -96,6 +96,7 @@ const Projects = () => {
                   <source src={path} type="video/mp4" />
                   Your browser does not support the video tag
                 </video>
+
                 <div className="video-controls">
                   <button className="play-pause-btn" onClick={() => toggleVideo(key)}>
                     {pausedVideos.has(key) ? <Play size={18} /> : <Pause size={18} />}
