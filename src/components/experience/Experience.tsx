@@ -35,15 +35,13 @@ const Experience = () => {
       description: `
       Implemented end to end ETL pipelines in Azure Data Factory, incorporating SCD Type 1 and 2 to preserve historical data integrity.
       Handled re-designing a 15 page frontend UI section using clean and reusable components.
-      Enhanced a node based workflow with advanced React Flow features like animated zoom upon node selection, improving user navigation.
       Built a centralized input system to standardize form handling across the application.
-      Led the migration from a third party UI library to vanialla CSS and custom state management and resolved complex UI issues to optimize rendering performance.
-      Adopted Zustand for global state management avoiding prop drilling
+      Led the migration from a third party UI library to vanialla CSS and custom state management.
       `,
     },
   ];
   return (
-    <section className="experience">
+    <section id="experience" className="experience">
       <div className="heading">
         <div className="heading-text">
           <span className="heading-number">IV.</span>

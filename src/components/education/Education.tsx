@@ -35,15 +35,14 @@ const Education = () => {
       title: 'Bachelor of Technology, DSAI',
       institution: `ICFAI University`,
       description: `
-                  Graduation in August 2025, I'm specializing in Data Science and
-                  Artifical Intelligence. During my time here, I've come to
-                  understand the real value of technology and projects, which pushed
-                  me to work harder and grow as a developer.
+                  Graduating in August 2025, I'm specializing in Data Science and
+                  Artifical Intelligence. During my time here, I've learnt various applications of technologies via 
+                  projects and I was able to gain a strong foundation.
                 `,
     },
   ];
   return (
-    <section className="education">
+    <section id="education" className="education">
       <div className="heading">
         <div className="heading-text">
           <span className="heading-number">II.</span>

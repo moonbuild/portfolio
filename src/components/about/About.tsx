@@ -1,7 +1,7 @@
 import './about.css';
 const About = () => {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-text__container">
         <div className="about-title">
           <span className="heading-number">I.</span>
@@ -23,11 +23,9 @@ const About = () => {
           </span>
         </div>
       </div>
-      <div className="about-logo__container">
-        <div className="about-img__container">
-          <div className="about-img__glow"></div>
-          <img src="about/photo.jpg" className="about-img" alt="About Me" />
-        </div>
+      <div className="about-image-frame">
+        <div className="about-img__glow" />
+        <img src="about/photo.jpg" className="about-img" alt="About Me" />
       </div>
     </section>
   );

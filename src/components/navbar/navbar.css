@@ -9,7 +9,6 @@
   box-shadow: 2px 1px 10px var(--dark-navy);
   z-index: 100;
 
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,7 +20,8 @@
 .navbar-items {
   display: none;
   flex-direction: column;
-  background: rgba(17, 34, 64, 0.6);
+  background: rgba(17, 34, 64, 0.8);
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   right: 0;
@@ -30,7 +30,6 @@
   padding: 60px 20px 20px 20px;
   z-index: 200;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
 }
 .navbar-items.show {
   display: flex;
@@ -63,6 +62,7 @@
   .navbar-items {
     display: flex;
     flex-direction: row;
+    gap:12px;
     position: static;
     background: transparent;
     width: auto;

@@ -17,6 +17,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 .label-input-container {
@@ -26,8 +27,11 @@
 }
 
 .label {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: normal;
+  display: flex;
+  align-items: center;
+  gap:8px
 }
 .input-error-wrapper {
   display: flex;
@@ -37,10 +41,10 @@
 .input {
   background-color: var(--navy);
   outline: none;
-  padding: 6px 10px;
+  padding: 10px 16px;
   border-radius: 8px;
   border: none;
-  width: 400px;
+  min-width: 500px;
   color: var(--lightest-slate);
   caret-color: var(--light-slate);
 }
@@ -59,15 +63,22 @@
   margin-left: 2px;
 }
 .textarea {
-  width: 400px;
+  min-width: 500px;
   max-width: 400px;
+  min-height: 30px;
   max-height: 300px;
   color: var(--lightest-slate);
   caret-color: var(--light-slate);
   background-color: var(--navy);
+  border-radius: 8px;
   outline: none;
   border: none;
-  padding: 6px 10px;
+  padding: 10px 16px;
+}
+.contact-footer{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 .submit-btn {
   background-color: var(--navy);
@@ -84,4 +95,15 @@
 .submit-btn:hover {
   color: var(--lightest-slate);
   transform: scale(1.04);
+}
+
+@media (max-width: 768px){
+  .input{
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .textarea{
+        min-width: 300px;
+    max-width: 300px;
+  }
 }
