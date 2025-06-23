@@ -90,6 +90,7 @@ const Projects = () => {
                     videoRefs.current[key] = element;
                   }}
                   className="demo-video"
+                  preload="auto"
                   muted
                   loop
                 >
