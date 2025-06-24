@@ -64,6 +64,10 @@
   object-fit: cover;
   border-radius: 16px;
 }
+.media-container img {
+  height: 100%;
+  width: auto;
+}
 .video-controls {
   position: absolute;
   bottom: 12px;
@@ -195,4 +199,29 @@
   color: var(--white);
   font-family: var(--font-main);
   text-decoration: none;
+}
+.btn-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.tooltip-message {
+  visibility: hidden;
+  background-color: black;
+  color: var(--slate);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+.btn-tooltip-wrapper:hover .tooltip-message {
+  visibility: visible;
+  opacity: 1;
 }
