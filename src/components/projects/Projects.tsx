@@ -30,17 +30,18 @@ const Projects = () => {
     {
       key: 'face-landmark',
       video: false,
-      path: '',
+      path: '/projects/face-landmark.png',
       title: 'Face Landmark Detection',
       description: `Built a lightweight CNN model for fast real time detection of facial features like 
       eyes, nose and mouth. Employed advanced normalization and data augumentation techniques to enhance model robustness, achieving 90%+ accuracy and under 100ms inference.
       `,
       techStack: ['Python', 'Tensorflow'],
+      repoLink: 'https://github.com/moonbuild/face-landmarks',
     },
     {
       key: 'e-commerce',
       video: false,
-      path: '',
+      path: '/projects/e-commerce.png',
       title: 'E Commerce Website',
       description: `
                   Built a web application with backend and frontend from scratch during my internship at SCR. 
@@ -109,7 +110,7 @@ const Projects = () => {
               </div>
             ) : (
               <div className="media-container">
-                <span> Project Image </span>
+                <img src={path} />
               </div>
             )}
 
@@ -126,12 +127,19 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-actions">
-                <button className="project-code-btn">
-                  <a href={repoLink} target="_blank">
-                    <Code size={18} />
-                    Code
-                  </a>
-                </button>
+                <div className="btn-tooltip-wrapper">
+                  <button className="project-code-btn">
+                    <a href={repoLink} target="_blank">
+                      <Code size={18} />
+                      Code
+                    </a>
+                  </button>
+                  {!repoLink && (
+                    <span className="tooltip-message">
+                      This project is private, as it is a part of internship
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           </div>
