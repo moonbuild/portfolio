@@ -6,6 +6,7 @@ import Hero from './components/hero/Hero';
 import Navbar from './components/navbar/Navbar';
 import Projects from './components/projects/Projects';
 import Skills from './components/skills/Skills';
+import Footer from './footer/Footer';
 
 const Portfolio = () => {
   return (
@@ -28,6 +29,8 @@ const Portfolio = () => {
         {/* Contact Me */}
         <ContactMe />
       </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Building, CalendarDays, Code } from 'lucide-react';
 import './experience.css';
 
 const Experience = () => {
@@ -8,14 +9,17 @@ const Experience = () => {
     role: string;
     description: string;
   }
+
   const experienceDetails: ExperienceDetails[] = [
     {
       key: 'scr',
       duration: 'June 2023 - August 2023',
       company: 'South Central Railway',
       role: 'Full Stack Developer',
-      description: `Developed comprehensive backend server solutions with advanced database operations, while creating intuitive frontend interfaces.
-       Built multiple applications from scratch and led the development of a large-scale backend project managing over 10,000 records with optimal performance and reliability.`,
+      description: `
+       Developed comprehensive backend server solutions with advanced database operations, while creating intuitive frontend interfaces.
+       Built multiple applications from scratch and led the development of a large-scale backend project managing over 10,000 records with optimal performance and reliability.
+       `,
     },
     {
       key: 'kalories',
@@ -23,8 +27,8 @@ const Experience = () => {
       company: 'Kalories',
       role: 'Full Stack Developer',
       description: `
-      Led key website design improvements that enhance the user interface and increased engagement by 15%. Designed a custom 
-      customer support AI voice agent leveraging advanced transcription and text-to-speech API's, contributing to 20% boost in sales. 
+      Led key website design improvements that enhance the user interface and increased engagement by 15%. 
+      Designed a custom customer support AI voice agent leveraging advanced transcription and text-to-speech API's, contributing 20% boost in sales. 
       `,
     },
     {
@@ -33,13 +37,13 @@ const Experience = () => {
       company: 'Xyenta Solutions',
       role: 'Full Stack Developer',
       description: `
-      Implemented end to end ETL pipelines in Azure Data Factory, incorporating SCD Type 1 and 2 to preserve historical data integrity.
+      Implemented ETL pipelines in Azure Data Factory, with SCD Type 1 and 2 to preserve history.
       Handled re-designing a 15 page frontend UI section using clean and reusable components.
-      Built a centralized input system to standardize form handling across the application.
-      Led the migration from a third party UI library to vanialla CSS and custom state management.
+      Built a centralized input system to standardize form handling across the application and handled migration from UI library to vanilla CSS.
       `,
     },
   ];
+
   return (
     <section id="experience" className="experience">
       <div className="heading">
@@ -53,9 +57,18 @@ const Experience = () => {
           {experienceDetails.map(({ key, duration, company, role, description }) => (
             <div key={key} className="timeline-item">
               <div className="timeline-card">
-                <div className="exp-date">{duration}</div>
-                <div className="exp-company">{company}</div>
-                <div className="exp-role">{role}</div>
+                <div className="exp-date">
+                  <CalendarDays size={16} />
+                  {duration}
+                </div>
+                <div className="exp-company">
+                  <Building size={18} />
+                  {company}
+                </div>
+                <div className="exp-role">
+                  <Code size={16} />
+                  {role}
+                </div>
                 <div className="exp-description">{description}</div>
               </div>
             </div>

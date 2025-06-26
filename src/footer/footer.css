@@ -1,0 +1,35 @@
+.footer {
+}
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.account-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+.account-content svg {
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+}
+.account-name {
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    max-width 0.8s ease,
+    opacity 0.8s ease;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.account-content:hover .account-name {
+  visibility: visible;
+  opacity: 1;
+  max-width: 24ch;
+}

@@ -3,10 +3,10 @@
 
   position: sticky;
   top: 0;
-  background: rgba(10, 25, 47, 0.6);
+  background: var(--primary-4);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 2px 1px 10px var(--dark-navy);
+  box-shadow: 2px 1px 10px var(--primary-1);
   z-index: 100;
 
   display: flex;
@@ -20,7 +20,7 @@
 .navbar-items {
   display: none;
   flex-direction: column;
-  background: rgba(17, 34, 64, 0.8);
+  background: var(--primary-4);
   backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
@@ -38,11 +38,14 @@
 .navbar-title {
   white-space: nowrap;
 }
+.navbar-title:hover {
+  color: var(--contrast);
+}
 
 .navbar-item {
   padding: 12px 8px;
   text-align: center;
-  border-bottom: 1px solid var(--green);
+  border-bottom: 1px solid var(--contrast);
   transition: color 0.3s ease;
 }
 .navbar-item:last-child {
@@ -53,7 +56,7 @@
   align-items: center;
   background: none;
   border: none;
-  color: var(--light-slate);
+  color: var(--neutral-2);
   cursor: pointer;
   z-index: 210;
 }
@@ -77,7 +80,7 @@
     transition: all 0.2s ease-in-out;
   }
   .navbar-item:hover {
-    border-bottom: 1px solid var(--green);
+    border-bottom: 1px solid var(--contrast);
   }
   .hamburger {
     display: none;
