@@ -19,7 +19,12 @@ const Navbar = () => {
       <a href="#hero" className="navbar-title">
         / MP
       </a>
-      <button className="hamburger" onClick={toggleOpen}>
+      <button
+        className="hamburger"
+        type="button"
+        aria-label="Toggle Navigation menu"
+        onClick={toggleOpen}
+      >
         <MenuIcon size={20} />
       </button>
       <div className={`navbar-items ${isOpen ? 'show' : ''}`}>

@@ -1,5 +1,5 @@
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 35px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,6 +94,9 @@
 
 /* medium screen size */
 @media (min-width: 768px) {
+  .hero {
+    min-height: calc(100vh - 50px);
+  }
   .hero-title {
     font-size: 5.5rem;
   }

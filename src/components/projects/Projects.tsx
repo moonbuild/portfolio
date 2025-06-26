@@ -22,7 +22,7 @@ const Projects = () => {
       title: 'Brain Visualisation',
       description: `
       This web application is helps neuroscientists and researchers visualize EEG data as Topomaps, PSD Plots and many such visualisations.
-      Utilized MNE Python for signal filtering, artifact removal, event annotation and epoch analysis.
+      Utilized MNE Python for signal filtering, artifact removal, event annotation and epoch analysis. Allowed user to download all images as an organised Zip file.
       `,
       techStack: ['React', 'Typescript', 'TailwindCSS', 'Python', 'FastAPI', 'Zustand'],
       repoLink: 'https://github.com/moonbuild/BrainVis',
@@ -34,9 +34,10 @@ const Projects = () => {
       title: 'Face Landmark Detection',
       description: ` 
       Built a lightweight and fast CNN Model for detecting facial features like eyes, nose, lips.
-      Employed advanced normalization to enhance the model. Acheived 90%+ accuracy under 100ms inference.
+      Reduced model size by 60% through architecture optimization while preserving detection accuracy.
+      Implemented advanced normalization techniques and data augmentation to achieve 90%+ accuracy while maintaining sub-100ms inference time.
       `,
-      techStack: ['Python', 'Tensorflow'],
+      techStack: ['Python', 'Tensorflow', 'Keras', 'OpenCv'],
       repoLink: 'https://github.com/moonbuild/face-landmarks',
     },
     {
@@ -45,11 +46,11 @@ const Projects = () => {
       path: '/projects/e-commerce.png',
       title: 'E Commerce Website',
       description: `
-      Designed the SQL database and its tables such that it can handle records of 1000 operations on a daily basis.
+      Designed the SQL database and tables to handle 1000+ operations on a daily basis.
       Added Team hierarchy, Order tracking, role based access for Sellers, Buyers and admins improving efficency by 40%.
       Implemented robust validations for each operation and appropriate alerts to user with Javascript.
                 `,
-      techStack: ['PHP', 'PostgreSQL', 'TailwindCSS'],
+      techStack: ['PHP', 'Javascript', 'MySql', 'TailwindCSS'],
     },
   ];
 
