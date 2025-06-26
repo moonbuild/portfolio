@@ -3,6 +3,7 @@ import { Mail, MessageSquare, Send, User } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 
 import './contactMe.css';
+import sendToWebhook from './sendToWebhooks';
 
 const ContactMe = () => {
   const [hasInteracted, setHasInteracted] = useState<boolean>(false);
@@ -12,26 +13,7 @@ const ContactMe = () => {
   const [name, setName] = useState<string>('');
   const [nameErrorMessage, setNameErrorMessage] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const sendToWebhook = async (data: { email: string; name: string; message: string }) => {
-    await toast.promise(
-      fetch(import.meta.env.VITE_WEBHOOK_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      }).then((res) => {
-        if (!res.ok && res.status !== 200) {
-          throw new Error(`Failed to send message :( \n Status: ${res.status}`);
-        }
-      }),
-      {
-        loading: 'Sending your message...',
-        success: 'Message sent successfully!',
-        error: 'Failed to send message :(',
-      },
-    );
-  };
+
   const formSubmit = useCallback(() => {
     if (email.trim().length === 0 || name.trim().length === 0) {
       toast.error('Please enter name and email so that I can properly contact you');
@@ -67,7 +49,6 @@ const ContactMe = () => {
             <div className="label">
               <Mail color="var(--accent-blue)" size={18} />
               <div>
-                {' '}
                 Email<span className="required">*</span>
               </div>
             </div>
@@ -92,7 +73,7 @@ const ContactMe = () => {
           </div>
           <div className="label-input-container">
             <div className="label">
-              <User color="var(--accent-blue)" size={18} />{' '}
+              <User color="var(--accent-blue)" size={18} />
               <div>
                 Name<span className="required">*</span>
               </div>

@@ -1,4 +1,5 @@
 import { Bot, Hammer, SquareDashedMousePointer, Webhook } from 'lucide-react';
+
 import './skills.css';
 
 const Skills = () => {
@@ -8,6 +9,7 @@ const Skills = () => {
     category: string;
     skillsList: string[];
   }
+
   const skillDetails: SkillDetails[] = [
     {
       key: 'frontend',
@@ -33,7 +35,7 @@ const Skills = () => {
       key: 'dsai',
       icon: <Bot size={18} />,
       category: 'Data Science and AI',
-      skillsList: ['TensorFlow', 'NumPy', 'Pandas', 'Matplotlib', 'openCV'],
+      skillsList: ['TensorFlow', 'NumPy', 'Pandas', 'Matplotlib', 'OpenCV'],
     },
     {
       key: 'development',
@@ -42,6 +44,7 @@ const Skills = () => {
       skillsList: ['Git', 'Git Hooks', 'ESLint', 'CI/CD'],
     },
   ];
+
   return (
     <section id="skills" className="skills">
       <div className="heading">

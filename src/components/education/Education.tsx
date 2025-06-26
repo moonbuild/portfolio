@@ -1,5 +1,7 @@
-import { MapPinIcon } from 'lucide-react';
+import { CalendarDays, GraduationCap, MapPinIcon } from 'lucide-react';
+
 import './education.css';
+
 const Education = () => {
   interface EducationDetails {
     key: string;
@@ -8,6 +10,7 @@ const Education = () => {
     institution: string;
     description: string;
   }
+
   const educationDetails: EducationDetails[] = [
     {
       key: 'school',
@@ -20,7 +23,7 @@ const Education = () => {
                   `,
     },
     {
-      key: 'school',
+      key: 'intermediate',
       duration: '2019 - 2021',
       title: '11th - 12th MPC Intermediate',
       institution: `Nano Junior College, Nallakunta, Hyderabad, India`,
@@ -30,17 +33,18 @@ const Education = () => {
                   `,
     },
     {
-      key: 'school',
+      key: 'university',
       duration: '2021 - 2025',
       title: 'Bachelor of Technology, DSAI',
       institution: `ICFAI University`,
       description: `
-                  Graduating in August 2025, I'm specializing in Data Science and
-                  Artifical Intelligence. During my time here, I've learnt various applications of technologies via 
-                  projects and I was able to gain a strong foundation.
+                  Graduating in August 2025, I'm specializing in Data Science and Artifical Intelligence.
+                  During my time here, I've experimented with various technologies and frameworks via 
+                  projects and gained a solid foundation.
                 `,
     },
   ];
+
   return (
     <section id="education" className="education">
       <div className="heading">
@@ -53,8 +57,14 @@ const Education = () => {
         {educationDetails.map(({ key, duration, title, institution, description }) => (
           <div key={key} className="timeline-item">
             <div className="timeline-card">
-              <div className="edu-date">{duration}</div>
-              <div className="edu-title">{title}</div>
+              <div className="edu-date">
+                <CalendarDays size={18} />
+                {duration}
+              </div>
+              <div className="edu-title">
+                <GraduationCap size={18} />
+                {title}
+              </div>
               <div className="edu-institution">
                 <MapPinIcon size={18} />
                 {institution}

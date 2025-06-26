@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Code, Fullscreen, Pause, Play } from 'lucide-react';
 
 import './projects.css';
@@ -21,8 +21,8 @@ const Projects = () => {
       path: '/projects/brain-vis.mp4',
       title: 'Brain Visualisation',
       description: `
-      Built a web application using React, Vite and Typescript for EEG data visualization in neuroscience research.
-      Integrated FastAPI with MNE Python for signal filtering, artifact removal, event annotation and epoch analysis.
+      This web application is helps neuroscientists and researchers visualize EEG data as Topomaps, PSD Plots and many such visualisations.
+      Utilized MNE Python for signal filtering, artifact removal, event annotation and epoch analysis.
       `,
       techStack: ['React', 'Typescript', 'TailwindCSS', 'Python', 'FastAPI', 'Zustand'],
       repoLink: 'https://github.com/moonbuild/BrainVis',
@@ -32,8 +32,9 @@ const Projects = () => {
       video: false,
       path: '/projects/face-landmark.png',
       title: 'Face Landmark Detection',
-      description: `Built a lightweight CNN model for fast real time detection of facial features like 
-      eyes, nose and mouth. Employed advanced normalization and data augumentation techniques to enhance model robustness, achieving 90%+ accuracy and under 100ms inference.
+      description: ` 
+      Built a lightweight and fast CNN Model for detecting facial features like eyes, nose, lips.
+      Employed advanced normalization to enhance the model. Acheived 90%+ accuracy under 100ms inference.
       `,
       techStack: ['Python', 'Tensorflow'],
       repoLink: 'https://github.com/moonbuild/face-landmarks',
@@ -44,12 +45,14 @@ const Projects = () => {
       path: '/projects/e-commerce.png',
       title: 'E Commerce Website',
       description: `
-                  Built a web application with backend and frontend from scratch during my internship at SCR. 
-                  Desinged a SQL database with 10,000 records , integrated inventory and order tracking, and added role based-access for Sellers, Buyers, and Admins improving efficiency by 40%. 
+      Designed the SQL database and its tables such that it can handle records of 1000 operations on a daily basis.
+      Added Team hierarchy, Order tracking, role based access for Sellers, Buyers and admins improving efficency by 40%.
+      Implemented robust validations for each operation and appropriate alerts to user with Javascript.
                 `,
       techStack: ['PHP', 'PostgreSQL', 'TailwindCSS'],
     },
   ];
+
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
   const [pausedVideos, setPausedVideos] = useState<Set<string>>(
     new Set(projectDetails.map((project) => project.key)),
@@ -72,6 +75,22 @@ const Projects = () => {
       }
     }
   };
+
+  const handleFullScreen = (key: string) => {
+    const video = videoRefs.current[key];
+    video?.requestFullscreen();
+  };
+
+  useEffect(() => {
+    const pausedSet = new Set<string>();
+    for (const key of projectDetails.map((p) => p.key)) {
+      const video = videoRefs.current[key];
+      if (video?.paused) {
+        pausedSet.add(key);
+      }
+    }
+    setPausedVideos(pausedSet);
+  }, [projectDetails]);
 
   return (
     <section id="projects" className="projects">
@@ -103,7 +122,7 @@ const Projects = () => {
                   <button className="play-pause-btn" onClick={() => toggleVideo(key)}>
                     {pausedVideos.has(key) ? <Play size={18} /> : <Pause size={18} />}
                   </button>
-                  <button className="fullscreen-btn">
+                  <button className="fullscreen-btn" onClick={() => handleFullScreen(key)}>
                     <Fullscreen size={18} />
                   </button>
                 </div>
@@ -128,7 +147,7 @@ const Projects = () => {
               </div>
               <div className="project-actions">
                 <div className="btn-tooltip-wrapper">
-                  <button className="project-code-btn">
+                  <button className={`project-code-btn ${!repoLink ? 'disabled' : ''}`}>
                     <a href={repoLink} target="_blank">
                       <Code size={18} />
                       Code
