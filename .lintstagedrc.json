@@ -1,3 +1,4 @@
 {
-  "src/**/*.{js,jsx,ts,tsx,css,json}": ["eslint --quiet --fix", "prettier --write"]
+  "src/**/*.{js,jsx,ts,tsx}": ["eslint --quiet --fix", "eslint --max-warnings=0"],
+  "src/**/*.{js,jsx,ts,tsx,css,json}": ["prettier --write"]
 }
