@@ -67,7 +67,7 @@ const Projects = () => {
         videoRef.play();
         setPausedVideos((prev) => {
           const newSet = new Set(prev);
-          prev.delete(key);
+          newSet.delete(key);
           return newSet;
         });
       } else {
