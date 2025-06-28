@@ -18,7 +18,7 @@ const Projects = () => {
     {
       key: 'brain-vis1',
       video: true,
-      path: '/projects/brain-vis.mp4',
+      path: 'https://raw.githubusercontent.com/moonbuild/portfolio/main/public/projects/brain-vis.mp4',
       title: 'Brain Visualisation',
       description: `
       This web application is helps neuroscientists and researchers visualize EEG data as Topomaps, PSD Plots and many such visualisations.
