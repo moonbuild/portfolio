@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // After Much delibration, im changing the plan from SSR -> SSG
+  output:'export', // this command creates a /out folder that is used in cloudfare
+  images:{
+    unoptimized:true,
+  },
   reactCompiler: true,
 };
 
