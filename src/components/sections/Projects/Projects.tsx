@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useRef, useState } from 'react';
+import { ReactNode, useRef, useState } from 'react';
 import styles from './Projects.module.css';
 import {
   Bot,
@@ -89,17 +89,6 @@ const Projects = () => {
     const video = videoRefs.current[key];
     video?.requestFullscreen();
   };
-
-  useEffect(() => {
-    const pausedSet = new Set<string>();
-    for (const key of projectData.map((p) => p.key)) {
-      const video = videoRefs.current[key];
-      if (video?.paused) {
-        pausedSet.add(key);
-      }
-    }
-    setPausedVideos(pausedSet);
-  }, [projectData]);
 
   return (
     <section id="projects" className={styles.projects}>
