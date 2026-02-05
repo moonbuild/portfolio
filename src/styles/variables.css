@@ -1,0 +1,25 @@
+:root {
+  /* Primary colors */
+  --bg-dark: #050505;
+  --bg-panel: #0a0a0a;
+  --bg-card: #111111;
+  --bg-grey: #303030;
+
+  /* Neon colors */
+  --neon-green: #39ff14;
+  --neon-purple: #9d00ff;
+  --neon-pink: #ff0055;
+
+  --rgb-neon-green: 57, 255, 20;
+  --rgb-neon-purple: 157, 0, 255;
+  --rgb-neon-pink: 255, 0, 85;
+
+  /* Utility colors */
+  --text-white: #ffffff;
+  --text-grey: #9ca3af;
+  --text-grey-2: #171717;
+  --border-dim: #222222;
+  --border-mid: #333333;
+
+  /* fonts are imported via Next layout.tsx*/
+}

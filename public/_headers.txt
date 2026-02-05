@@ -1,0 +1,4 @@
+/projects/*.mp4
+    Content-Type: video/mp4
+    Cache-Control: public, max-age=3600
+    Accept-Ranges: bytes

@@ -1,0 +1,30 @@
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: var(--font-mono-space);
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  background-color: transparent;
+  font-family: var(--font-space-mono);
+  outline: none;
+  border: none;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-archivo);
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+::selection {
+  background-color: var(--neon-green);
+  color: black;
+}
