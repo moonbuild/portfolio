@@ -1,8 +1,9 @@
-# 🚀 Portfolio [![License](https://img.shields.io/github/license/moonbuild/portfolio?color=blue&style=flat-square)]
+# 🚀 Portfolio 
+<!-- [![License](https://img.shields.io/github/license/moonbuild/portfolio?color=blue&style=flat-square)] -->
 
-![preview-img](./public/github/image.png)
+<!-- ![preview-img](./public/github/image.png) -->
 
-<div align="center">
+<!-- <div align="center">
     <span style="font-size: 1.5rem;">🛠️ Built With</span>
     <div align="center">
         <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">&nbsp;
@@ -10,7 +11,7 @@
         <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="React">&nbsp;
         <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
     </div>
-</div>
+</div> -->
 
 ## Hey 👋
 <div>
@@ -47,4 +48,4 @@ npm install
 npm run dev
 ````
 Once its running, go to:
-👉 http://localhost:5173/
+👉 http://localhost:3000/

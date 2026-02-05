@@ -1,0 +1,146 @@
+.contactMe {
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+
+  background-color: var(--bg-dark);
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://www.transparenttextures.com/patterns/cartographer.png');
+
+  border-bottom: 2px solid var(--border-mid);
+  padding: 80px 170px 60px 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  font-family: var(--font-space-mono);
+  z-index: 22;
+}
+.signalTag {
+  padding: 8px 12px;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 1;
+}
+.signalTag.idle {
+  color: var(--neon-green);
+} /* Green */
+.signalTag.loading {
+  color: #00f2ff;
+} /* Cyan/Blue */
+.signalTag.success {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
+}
+.signalTag.error {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+.signalDot {
+  font-size: 12px;
+}
+
+.title {
+  font-family: var(--font-archivo);
+  font-size: 72px;
+  line-height: 1;
+  white-space: wrap;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.labelText {
+  font-size: 14px;
+}
+.inputBox {
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-archivo);
+  font-size: 18px;
+  padding: 4px 4px;
+  color: var(--text-white);
+  text-decoration: none;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid var(--bg-grey);
+  min-width: 100%;
+  max-width: 100%;
+}
+.inputBox::placeholder {
+  opacity: 0.6;
+}
+
+.submitButton {
+  padding: 8px 12px;
+  color: var(--text-white);
+  font-size: 15px;
+  background-color: var(--neon-purple);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 4px 4px 0 0 var(--neon-green);
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.submitButton:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  text-shadow: none;
+}
+.errorMessage {
+  margin-top: 1rem;
+  color: var(--neon-pink);
+  font-size: 0.8rem;
+  text-align: center;
+  animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* PURPLE */
+.groupPurple .labelText {
+  color: var(--neon-purple);
+}
+.groupPurple .inputBox:focus {
+  border-bottom: 1px solid var(--neon-purple);
+}
+.groupGreen .labelText {
+  color: var(--neon-green);
+}
+.groupGreen .inputBox:focus {
+  border-bottom: 1px solid var(--neon-green);
+}
+.groupPink .labelText {
+  color: var(--neon-pink);
+}
+.groupPink .inputBox:focus {
+  border-bottom: 1px solid var(--neon-pink);
+}

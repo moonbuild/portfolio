@@ -1,0 +1,38 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  font-family: var(--font-space-mono);
+}
+.pageContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.bgGrid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(157, 0, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(157, 0, 255, 0.1), 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.3;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.2)
+  );
+  background-size: 100% 4px;
+}

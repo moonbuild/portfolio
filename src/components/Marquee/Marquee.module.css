@@ -1,0 +1,36 @@
+.techStack {
+  position: relative;
+  background-color: var(--neon-purple);
+  border-top: 2px solid var(--neon-purple);
+  border-top: 2px solid var(--neon-purple);
+  padding: 12px 0px;
+  overflow: hidden;
+}
+.marqueeBG {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre-v2.png');
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.marqueeContent {
+  white-space: nowrap;
+  display: flex;
+  width: fit-content;
+}
+.marqueeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+
+  font-family: var(--font-archivo);
+  font-size: 32px;
+  color: black;
+}
+.dot {
+  font-size: 24px;
+}
