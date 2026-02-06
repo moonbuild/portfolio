@@ -43,8 +43,10 @@
 /* Cards */
 .cardsContainer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 .card {
@@ -264,10 +266,10 @@
     opacity 0.2s ease-in-out,
     transform 0.2s ease-in-out;
 }
-.codeBtn:not(:disabled).btnText {
+.codeBtn:not(:disabled):hover .btnText {
   transform: translateX(-10px);
 }
-.codeBtn:not(:disabled):hover.externalLink {
+.codeBtn:not(:disabled):hover .externalLink {
   opacity: 1;
   transform: translateX(0);
 }
@@ -360,4 +362,73 @@
 .card.groupPink:hover .codeBtn:not(:disabled):hover {
   border-color: var(--neon-pink);
   color: var(--neon-pink);
+}
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
+}
+.modalAsset {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* height: inherit; */
+}
+@media (max-width: 425px) {
+  /*
+   1. Change Padding & Font
+  2. Change Header to be vertical but to each their own side
+  3. Cards stack vertically
+  */
+  .projects {
+    padding: 80px 20px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: normal;
+    gap: 12px;
+  }
+  .glitchTitle {
+    font-size: 40px;
+  }
+  .headerMessage {
+    font-size: 14px;
+    /* align-self: flex-end; */
+  }
+  .cardsContainer {
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    width: calc(100%-90px);
+  }
+  .card {
+    width: 100%;
+    height: 465px;
+  }
+  .videoControls {
+    opacity: 1;
+  }
+  .cardBody {
+    padding: 8px;
+  }
+  .techTag {
+    font-size: 11px;
+  }
+  .buttonsContainer {
+  }
+  .demoBtn {
+    padding: 4px 40px;
+  }
+  .codeBtn {
+    padding: 4px 40px;
+  }
+}
+@media (425px< width <= 768px) {
+  .projects {
+    padding: 80px 20px;
+  }
+  .videoControls {
+    opacity: 1;
+  }
 }

@@ -1,7 +1,8 @@
 import { Archivo_Black, Space_Mono } from 'next/font/google';
-// import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
 import './globals.css';
+import { OverlayProvider } from '@/context/OverlayContext';
 
 const archivo = Archivo_Black({
   weight: '400',
@@ -15,6 +16,11 @@ const spaceMono = Space_Mono({
   variable: '--font-space-mono',
 });
 
+export const metadata: Metadata = {
+  title: 'Mourya Pranay',
+  description: 'Portfolio of Mourya Pranay',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} ${spaceMono.variable}`}>{children}</body>
+      <body className={`${archivo.variable} ${spaceMono.variable}`}>
+        <OverlayProvider>{children}</OverlayProvider>
+      </body>
     </html>
   );
 }

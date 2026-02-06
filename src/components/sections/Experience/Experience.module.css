@@ -57,8 +57,6 @@
   padding: 0 6px;
 }
 
-.timelineWrapper {
-}
 .timeline {
   display: flex;
   flex-direction: column;
@@ -173,4 +171,72 @@
 }
 .groupPink:hover .jobCard {
   border-color: var(--neon-pink);
+}
+
+@media (max-width: 425px) {
+  .experience {
+    padding: 80px 20px 60px 20px;
+  }
+
+  .timeline {
+    padding-left: 18px;
+  }
+  .timelineDot {
+    width: 21px;
+    height: 21px;
+    left: -30px;
+  }
+  .bgTextOverlay {
+    font-size: 55px;
+    top: -90px;
+    left: -206px;
+  }
+  .sectionTitle {
+    font-size: 40px;
+    flex-wrap: wrap;
+  }
+  .cardHeader {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cardHeaderLeft {
+    align-self: flex-start;
+  }
+
+  .jobTitle {
+    white-space: nowrap;
+  }
+  .jobMainDataContainer {
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 2px;
+    width: 100%;
+  }
+  .companyName {
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+  .jobType {
+    white-space: nowrap;
+    font-size: 10px;
+    align-self: flex-start;
+  }
+  .durationBadge {
+    font-size: 10px;
+    align-self: flex-start;
+  }
+  .jobList {
+    font-size: 13px;
+  }
+}
+
+@media (425px<width<=1000px) {
+  .experience {
+    padding: 80px 30px 60px 30px;
+  }
+  .bgTextOverlay {
+    font-size: 100px;
+    top: -170px;
+    left: -206px;
+  }
 }

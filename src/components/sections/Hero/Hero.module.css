@@ -147,5 +147,48 @@
   left: 18px;
   z-index: -10;
 }
-@media screen {
+
+@media (max-width: 425) {
+  /* 
+  1. Hide Code Graphic Block
+  2. Decrease font sizes for all appropriately.
+  3. Stack buttons vertically 
+   */
+  .hero {
+    padding: 120px 20px 60px 20px;
+  }
+  .codeGraphicWrapper {
+    display: none;
+  }
+  .statusBar {
+    gap: 12px;
+    margin-left: 10px;
+  }
+  .title {
+    font-size: 70px;
+  }
+  .description {
+    font-size: 13px;
+    padding-left: 12px;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (768<= width< 1020px) {
+  /* 1. Decrease Font Size  */
+  /* 2. Decrease Padding */
+  .hero {
+    padding: 130px 40px 60px 40px;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+  .description {
+    font-size: 14px;
+    padding-left: 14px;
+  }
 }

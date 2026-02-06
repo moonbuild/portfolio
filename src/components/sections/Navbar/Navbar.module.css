@@ -3,8 +3,7 @@
   top: 0;
   width: 100%;
   height: 70px;
-  z-index: 100;
-
+  z-index: 30;
   background-color: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -16,6 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   height: 100%;
   padding: 0px 24px;
 }
@@ -54,8 +54,12 @@
   font-family: var(--font-space-mono);
   font-size: 16px;
   text-decoration: none;
-  color: white;
+  color: var(--text-white);
 }
+.navHidden {
+  display: none;
+}
+
 /* Hover classes */
 .hoverPurple:hover {
   color: var(--neon-purple);
@@ -66,7 +70,12 @@
 .hoverPink:hover {
   color: var(--neon-pink);
 }
-
+.hamBurger {
+  display: none;
+  border: none;
+  background: none;
+  /* cursor: pointer; */
+}
 /* Hire Me Button */
 .hireMeWrapper {
   /* position: relative; */
@@ -85,7 +94,6 @@
 }
 .hireMeText {
   position: relative;
-  z-index: 10;
 
   color: var(--text-white);
   font-family: var(--font-space-mono);
@@ -115,3 +123,60 @@ transition: transform 0.2s ease;
 .hireMeBtn:hover .hireMeBtnBg{
   transform: scaleX(1);
 } */
+@media (max-width: 1020px) {
+  .navbar {
+    background-color: var(--bg-dark);
+  }
+  .hamBurger {
+    display: block;
+  }
+  .navHidden {
+    display: block;
+  }
+  .hireMeWrapper {
+    display: none;
+  }
+  /* .nav */
+  .navOpen.navbar {
+    z-index: 40;
+  }
+  .navigationItems {
+    display: none;
+  }
+  .navOpen.navigationItems {
+    position: fixed;
+    /* ~70px navbar height */
+    top: 70px;
+    right: 0;
+    left: 0;
+    background-color: var(--bg-dark);
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-bottom: 2px solid var(--border-mid);
+    /* padding: 12px 0; */
+  }
+
+  .navLink {
+    width: 90%;
+    padding: 12px 12px;
+
+    font-size: 18px;
+    font-family: var(--font-archivo);
+  }
+
+  .navLink.hoverGreen {
+    border-bottom: 1px solid var(--border-dim);
+    color: var(--neon-green);
+  }
+  .navLink.hoverPurple {
+    border-bottom: 1px solid var(--border-dim);
+    color: var(--neon-purple);
+  }
+  .navLink.hoverPink {
+    border-bottom: 1px solid var(--border-dim);
+    color: var(--neon-pink);
+  }
+}

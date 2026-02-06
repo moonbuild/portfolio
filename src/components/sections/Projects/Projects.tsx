@@ -10,6 +10,7 @@ import {
   ShoppingCart,
 } from 'lucide-react';
 import Image from 'next/image';
+import Modal from '@/components/Modal/Modal';
 
 const Projects = () => {
   interface ProjectData {
@@ -29,7 +30,7 @@ const Projects = () => {
       title: 'Brain Visualisation',
       description:
         'Full-stack EEG platform performing preprocessing, artifact removal, and topomap/PSD visualization using MNE with downloadable batch exports.',
-      techStack: ['React', 'TypeScript', 'TailwindCSS', 'Python', 'FastAPI', 'Zustand'],
+      techStack: ['React', 'TypeScript', 'Zustand', 'TailwindCSS', 'Python', 'FastAPI'],
       repoLink: 'https://github.com/moonbuild/BrainVis',
       tag: 'Data Visualization',
       type: 'video',
@@ -61,6 +62,7 @@ const Projects = () => {
       icon: <ShoppingCart size={24} className={styles.cardIcon} />,
     },
   ];
+  const [selectedProject, setSelectedProject] = useState<ProjectData | undefined>(undefined);
 
   const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
   const [pausedVideos, setPausedVideos] = useState<Set<string>>(
@@ -88,6 +90,12 @@ const Projects = () => {
   const handleFullScreen = (key: string) => {
     const video = videoRefs.current[key];
     video?.requestFullscreen();
+  };
+  const handleModalOpen = (project: ProjectData) => {
+    setSelectedProject(project);
+  };
+  const handleModalClose = () => {
+    setSelectedProject(undefined);
   };
 
   return (
@@ -162,9 +170,22 @@ const Projects = () => {
                     ))}
                   </div>
                   <div className={styles.buttonsContainer}>
-                    <button className={styles.demoBtn}>DEMO</button>
+                    <button
+                      className={styles.demoBtn}
+                      onClick={() => {
+                        handleModalOpen(project);
+                      }}
+                    >
+                      DEMO
+                    </button>
                     <a style={{ textDecoration: 'none' }} href={project.repoLink} target="_blank">
-                      <button className={styles.codeBtn} disabled={project.repoLink === ''}>
+                      <button
+                        className={styles.codeBtn}
+                        disabled={project.repoLink === ''}
+                        title={
+                          project.repoLink === '' ? 'Source code is private' : 'View on Github'
+                        }
+                      >
                         <span className={styles.btnText}>CODE</span>
                         <ExternalLink size={18} className={styles.externalLink} />
                       </button>
@@ -176,6 +197,33 @@ const Projects = () => {
           );
         })}
       </div>
+      <Modal title="Demo" isOpen={!!selectedProject} onClose={handleModalClose}>
+        {!!selectedProject && (
+          <div className={styles.modalContainer}>
+            {selectedProject.type === 'image' ? (
+              <Image
+                alt={selectedProject.key}
+                src={selectedProject.assetLink}
+                className={styles.modalAsset}
+                fill
+                priority
+              />
+            ) : (
+              <video
+                key={selectedProject.key}
+                src={selectedProject.assetLink}
+                className={styles.modalAsset}
+                preload="auto"
+                muted
+                loop
+                playsInline
+                autoPlay={true}
+                controls
+              />
+            )}
+          </div>
+        )}
+      </Modal>
     </section>
   );
 };

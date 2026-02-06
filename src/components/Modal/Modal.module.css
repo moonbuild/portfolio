@@ -1,0 +1,38 @@
+.modalContainer {
+  position: fixed;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-card);
+  border: 1px solid var(--neon-purple);
+  box-shadow: 8px 8px 0 0 var(--neon-purple);
+  /* display: flex;
+  flex-direction: column; */
+
+  min-width: 700px;
+  height: 400px;
+  font-family: var(--font-space-mono);
+  z-index: 60;
+}
+
+.modalHeader {
+  background-color: var(--bg-panel);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 12px;
+  height: 36px;
+}
+.title {
+}
+.headerCloseBtn {
+  color: var(--text-white);
+  cursor: pointer;
+}
+.modalBody {
+  padding: 12px;
+  width: 100%;
+  height: calc(100% - 60px);
+}

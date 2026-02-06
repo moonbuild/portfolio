@@ -144,3 +144,50 @@
 .groupPink .inputBox:focus {
   border-bottom: 1px solid var(--neon-pink);
 }
+
+@media (max-width: 425px) {
+  .contactMe {
+    padding: 80px 20px 60px 20px;
+    gap: 24px;
+  }
+  .signalTag {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 60px;
+  }
+
+  .labelText {
+    font-size: 12px;
+  }
+  .inputBox {
+    font-size: 14px;
+  }
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (425px<width<1020px) {
+  .contactMe {
+    padding: 80px 20px 60px 20px;
+    gap: 24px;
+  }
+  .signalTag {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 60px;
+  }
+
+  .labelText {
+    font-size: 13px;
+  }
+  .inputBox {
+    font-size: 13px;
+  }
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

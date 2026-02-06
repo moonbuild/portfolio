@@ -12,8 +12,7 @@ const About = () => {
         <div className={styles.info}>
           <div className={styles.description}>
             Hey I am <span style={{ color: 'var(--neon-purple)' }}>Mourya</span>. I am proficient in
-            arguing with computers until they agree with my{' '}
-            <span className={styles.codeTag}>2.4.0</span> version of reality.
+            arguing with computers.
           </div>
           <div className={styles.description}>
             I am someone who gets easily sidetracked with small imperfections, but that is how i
@@ -41,13 +40,7 @@ const About = () => {
         </div>
       </div>
       <div className={`${styles.imageContainer}`}>
-        <Image
-          alt="Developer Photo @Me"
-          src={'/about/photo.png'}
-          className={styles.image}
-          width={400}
-          height={400}
-        />
+        <Image alt="Developer Photo @Me" src={'/about/photo.png'} className={styles.image} fill />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ const eslintConfig = defineConfig([
 
   {
     rules:{
-      // "react-hooks/exhaustive-deps":"off",
+      "react-hooks/exhaustive-deps":"off",
        "react-hooks/set-state-in-effect":"off"
     }
   },
