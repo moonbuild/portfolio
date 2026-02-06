@@ -41,7 +41,7 @@ const Projects = () => {
       key: 'face-landmark',
       title: 'Face Landmark Detection',
       description:
-        'Optimized CNN for real-time facial landmark detection with reduced model size and sub-100ms inference.',
+        'Optimized CNN for real-time facial landmark detection with reduced model size and sub-100ms inference. Tracks eyes, eyebrows, nose & mouth.',
       techStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV'],
       repoLink: 'https://github.com/moonbuild/face-landmarks',
       tag: 'Machine Learning',
@@ -53,7 +53,7 @@ const Projects = () => {
       key: 'ecommerce',
       title: 'E Commerce Website',
       description:
-        'SQL-backed e-commerce system with role-based access, hierarchy management, and order lifecycle tracking.',
+        'SQL-backed e-commerce system. Features role based access, hierarchy management, and a order lifecycle state tracking. Pending -> Paid -> Shipped',
       techStack: ['PHP', 'JavaScript', 'MySQL', 'TailwindCSS'],
       repoLink: '',
       tag: 'Web Application',
