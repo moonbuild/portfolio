@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="hero" className={styles.hero}>
       <div className={styles.heroContainer}>
         <div className={styles.statusBar}>
-          <div className={styles.statusBadge}>v2.0.SYS_READY</div>
+          <div className={styles.statusBadge}>v2.01.SYS_READY</div>
           <div className={styles.statusLiveIndicator}>
             <span className={`${styles.statusDot} pulse`}>●</span>
             <span>SYSTEM ONLINE</span>
@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
 
         <span className={styles.description}>
-          I craft digital chaos into structured systems. I build accessible, pixel accurate... well
+          I craft digital chaos into structured systems. I build systematic, pixel accurate... well
           you get the point.
         </span>
         <div className={styles.actions}>
