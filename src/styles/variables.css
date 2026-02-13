@@ -16,6 +16,7 @@
 
   /* Utility colors */
   --text-white: #ffffff;
+  --text-dark: var(--bg-dark);
   --text-grey: #9ca3af;
   --text-grey-2: #171717;
   --border-dim: #222222;

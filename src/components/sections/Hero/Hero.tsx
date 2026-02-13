@@ -1,4 +1,5 @@
-import { Github } from 'lucide-react';
+import ResumeActions from '@/components/ResumeActions';
+
 import styles from './Hero.module.css';
 
 const Hero = () => {
@@ -6,7 +7,7 @@ const Hero = () => {
     <section id="hero" className={styles.hero}>
       <div className={styles.heroContainer}>
         <div className={styles.statusBar}>
-          <div className={styles.statusBadge}>v2.01.SYS_READY</div>
+          <div className={styles.statusBadge}>v2.02.SYS_READY</div>
           <div className={styles.statusLiveIndicator}>
             <span className={`${styles.statusDot} pulse`}>●</span>
             <span>SYSTEM ONLINE</span>
@@ -26,18 +27,7 @@ const Hero = () => {
           you get the point.
         </span>
         <div className={styles.actions}>
-          <a href="#projects" className={`${styles.btn} ${styles.btnPrimary}`}>
-            View Projects
-          </a>
-          <a
-            href="https://github.com/moonbuild"
-            target="_blank"
-            rel="noreferrer"
-            className={`${styles.btn} ${styles.btnOutlined}`}
-          >
-            <Github />
-            Github
-          </a>
+          <ResumeActions />
         </div>
       </div>
       <div className={styles.codeGraphicWrapper}>
