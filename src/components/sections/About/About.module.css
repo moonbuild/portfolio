@@ -20,7 +20,6 @@
   align-items: flex-start;
   gap: 24px;
   width: calc(100% - 400px);
-  overflow: hidden;
 }
 .header {
   display: inline-flex;
@@ -54,6 +53,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
 
   width: 100%;
@@ -66,6 +66,7 @@
   justify-content: center;
   gap: 6px;
 
+  padding: 0px 36px;
   font-size: 12px;
 }
 .logoText {
@@ -112,6 +113,12 @@
   }
   .info {
     font-size: 13px;
+  }
+  .logos {
+    padding: 0 12px;
+  }
+  .logo {
+    padding: 0 12px;
   }
 }
 

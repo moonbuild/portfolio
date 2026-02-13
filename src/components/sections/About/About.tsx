@@ -1,6 +1,8 @@
 import { Cpu, Database, Globe, Zap } from 'lucide-react';
-import styles from './About.module.css';
 import Image from 'next/image';
+import ResumeActions from '@/components/ResumeActions';
+
+import styles from './About.module.css';
 
 const About = () => {
   return (
@@ -38,6 +40,7 @@ const About = () => {
             <span className={styles.logoText}>ARCH</span>
           </div>
         </div>
+        <ResumeActions />
       </div>
       <div className={`${styles.imageContainer}`}>
         <Image alt="Developer Photo @Me" src={'/about/photo.png'} className={styles.image} fill />

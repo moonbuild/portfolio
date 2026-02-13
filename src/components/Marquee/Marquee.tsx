@@ -10,7 +10,6 @@ const Marquee = () => {
     'docker',
     'kubernetes',
     'next.js',
-    'graphql',
     'python',
     'fastapi',
     'sqlalchemy',
