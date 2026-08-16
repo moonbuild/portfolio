@@ -47,5 +47,7 @@ npm install
 ```bash
 npm run dev
 ````
+
+
 Once its running, go to:
 👉 http://localhost:3000/
